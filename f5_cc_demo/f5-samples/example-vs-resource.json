@@ -1,0 +1,30 @@
+{
+  "virtualServer": {
+    "frontend": {
+      "balance": "round-robin",
+      "mode": "http",
+      "partition": "ose",
+      "virtualAddress": {
+        "bindAddr": "10.1.2.51",
+        "port": 443
+      },
+      "sslProfile": {
+        "f5ProfileName": "ose/cloudmegalodon.us_clientssl"
+      },
+      "sourceAddressTranslation": {
+        "type": "automap"
+      }
+    },
+    "backend": {
+      "serviceName": "example-service",
+      "servicePort": 8080,
+      "healthMonitors": [ {
+        "send": "GET / HTTP/1.0\\r\\n\\r\\n",
+        "interval": 30,
+        "timeout": 20,
+        "protocol": "http"
+        }
+      ]
+    }
+  }
+}
