@@ -1,7 +1,7 @@
 apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
-  name: f5-demo-app
+  name: tenanta
   namespace: f5demo
 spec:
   replicas: 1
