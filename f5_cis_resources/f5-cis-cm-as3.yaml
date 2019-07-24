@@ -18,29 +18,29 @@ data:
             "remark": "A1 example",
             "AS3": {
                 "class": "Tenant",
-                "A1": {
-                    "class": "Application",
-                    "template": "http",
-                    "serviceMain": {
-                        "class": "Service_HTTP",
-                        "virtualAddresses": [
-                            "10.1.2.100"
-                        ],
-                        "pool": "web_pool"
-                    },
-                    "web_pool": {
-                        "class": "Pool",
-                        "monitors": [
-                            "http"
-                        ],
-                        "members": [
-                            {
-                                "servicePort": 8080,
-                                "serverAddresses": []
-                            }
-                        ]
-                    }
-                }
+                # "A1": {
+                #     "class": "Application",
+                #     "template": "http",
+                #     "serviceMain": {
+                #         "class": "Service_HTTP",
+                #         "virtualAddresses": [
+                #             "10.1.2.100"
+                #         ],
+                #         "pool": "web_pool"
+                #     },
+                #     "web_pool": {
+                #         "class": "Pool",
+                #         "monitors": [
+                #             "http"
+                #         ],
+                #         "members": [
+                #             {
+                #                 "servicePort": 8080,
+                #                 "serverAddresses": []
+                #             }
+                #         ]
+                #     }
+                # }
             }
         }
     }
