@@ -2,8 +2,8 @@ apiVersion: v1
 kind: Service
 metadata:
   name: f5-hello-world-web
-   namespace: tenanta-dev
-   labels:
+  namespace: tenanta-dev
+  labels:
     app: f5-hello-world-web
     cis.f5.com/as3-tenant: ose
     cis.f5.com/as3-app: A1
