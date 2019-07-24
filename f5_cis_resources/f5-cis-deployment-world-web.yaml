@@ -16,7 +16,7 @@ spec:
       containers:
       - name: service_name
         value: f5-hello-world-web
-        image: f5devcentral/f5-hello-world:latest
+        image: "f5devcentral/f5-hello-world:develop"
         imagePullPolicy: Always
         name: f5-hello-world-web
         ports:
